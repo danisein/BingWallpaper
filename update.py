@@ -16,16 +16,16 @@ def update():
 	web_path = "http://www.bing.com/HPImageArchive.aspx"
 	data = ulb.urlencode(params)
 	web_path = web_path + '?' + data
-	print web_path
+	# print web_path
 	response = ulb2.urlopen(web_path)
 	result = response.read()
 	info = json.loads(result)
-	print info
+	# print info
 	#get the image
 	img_path = info['images'][0]['url']
 	if img_path.find('http') < 0:
 		img_path = 'http://www.bing.com' + img_path
-	print img_path
+	# print img_path
 	response = ulb2.urlopen(img_path)
 	result = response.read()
 	if (len(result) > 0):
