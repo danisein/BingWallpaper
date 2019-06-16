@@ -1,7 +1,7 @@
 
 # -*- coding: UTF-8 -*-
 import urllib as ulb
-import urllib2 as ulb2
+import urllib.request as ulb2
 import json
 import win32gui,win32con,win32api
 from PIL import Image
@@ -14,7 +14,7 @@ params['n'] = '1'    #number of pics
 def update():
 	#get the json info
 	web_path = "http://www.bing.com/HPImageArchive.aspx"
-	data = ulb.urlencode(params)
+	data = ulb.parse.urlencode(params)
 	web_path = web_path + '?' + data
 	# print web_path
 	response = ulb2.urlopen(web_path)
