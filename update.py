@@ -10,6 +10,9 @@ params = {}
 params['format'] = 'js'
 params['idx'] = '0'  #0 for today, 1 for yesterday and so on
 params['n'] = '1'    #number of pics
+params['uhd'] = '1'
+params['uhdwidth'] = '3840'
+params['uhdheight'] = '2160'
 
 def update():
 	#get the json info
